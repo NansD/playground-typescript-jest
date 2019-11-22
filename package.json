@@ -1,0 +1,35 @@
+{
+  "name": "playground-typescript-jest",
+  "version": "1.0.0",
+  "description": "A playground for testing with jest using typescript",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon --watch src/ --exec \"ts-node src/index.ts\" -e ts",
+    "start": "ts-node src/index.ts"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "\\.test\\.ts",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "node"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.11",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.1",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  }
+}
